@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.zenhub.io/p1/repositories/7777/issues/77/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Zenhub v0.1.0
+      X-Authentication-Token:
+      - access_token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 01 May 2016 03:27:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Zenhub-Request-Id:
+      - 50abd961-fdc2-45f0-b422-ee5f0389ce2e
+      X-Zenhub-Served-By:
+      - b91fa1501a5cf79ab84127e8b7a5c59129673cf0
+      X-Ratelimit-Limit:
+      - '100'
+      X-Ratelimit-Used:
+      - '1'
+      X-Ratelimit-Reset:
+      - '1462073280'
+      Etag:
+      - W/"8f0-923386129"
+      Set-Cookie:
+      - connect.sid=s%3AYU1rQ3YQJLWamA8FyI0HEvTd.m%2FJKU20%2FIOWV2OgMf6IxdIG6WaFfzYcfIjloHY8hlcA;
+        Path=/; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Frame-Options:
+      - DENY
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"user_id":1,"type":"addIssueToEpic","created_at":"2016-04-28T06:03:11.076Z"},{"user_id":1,"type":"transferIssue","created_at":"2016-04-26T01:51:41.091Z","from_pipeline":{"name":"Pipeline1"},"to_pipeline":{"name":"Pipeline2"}}]'
+    http_version: 
+  recorded_at: Sun, 01 May 2016 03:27:37 GMT
+recorded_with: VCR 3.0.1

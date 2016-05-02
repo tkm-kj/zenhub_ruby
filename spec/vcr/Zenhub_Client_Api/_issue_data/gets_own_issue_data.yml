@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.zenhub.io/p1/repositories/7777/issues/77
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Zenhub v0.1.0
+      X-Authentication-Token:
+      - access_token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 01 May 2016 03:27:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '77'
+      Connection:
+      - keep-alive
+      X-Zenhub-Request-Id:
+      - d4dbb068-54e4-4a52-9b7e-707deb7bd54a
+      X-Zenhub-Served-By:
+      - b91fa1501a5cf79ab84127e8b7a5c59129673cf0
+      X-Ratelimit-Limit:
+      - '100'
+      X-Ratelimit-Used:
+      - '1'
+      X-Ratelimit-Reset:
+      - '1462073280'
+      Etag:
+      - W/"4d-728524061"
+      Set-Cookie:
+      - connect.sid=s%3AmheQtkvD6mD2tCN0BHhPxICM.4QKnBXlNGgJGotBz0R3agWU7i5lDplnwz9SeUrv8J%2FY;
+        Path=/; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Frame-Options:
+      - DENY
+    body:
+      encoding: UTF-8
+      string: '{"estimate":{"value":8},"plus_ones":[],"pipeline":{"name":"In Progress
+        PBI"}}'
+    http_version: 
+  recorded_at: Sun, 01 May 2016 03:27:36 GMT
+recorded_with: VCR 3.0.1

@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.zenhub.io/p1/repositories/7777/board
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Zenhub v0.1.0
+      X-Authentication-Token:
+      - access_token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 01 May 2016 03:27:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Zenhub-Request-Id:
+      - ae228de6-4a20-4ca4-9eba-04aad3346db8
+      X-Zenhub-Served-By:
+      - b91fa1501a5cf79ab84127e8b7a5c59129673cf0
+      X-Ratelimit-Limit:
+      - '100'
+      X-Ratelimit-Used:
+      - '2'
+      X-Ratelimit-Reset:
+      - '1462073280'
+      Etag:
+      - W/"1b0b-1942665860"
+      Set-Cookie:
+      - connect.sid=s%3AfSriSU6siAdl43D7xGA6iQwm.EGoLnZq3e2CrCggqZou5%2BpJ42M%2FxqO7aYLRLe5tC7WE;
+        Path=/; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Frame-Options:
+      - DENY
+    body:
+      encoding: ASCII-8BIT
+      string: '{"pipelines":[{"name":"Pipeline1","issues":[{"issue_number":1,"position":0},{"issue_number":2,"estimate":{"value":3},"position":1}]}]}'
+    http_version: 
+  recorded_at: Sun, 01 May 2016 03:27:38 GMT
+recorded_with: VCR 3.0.1
