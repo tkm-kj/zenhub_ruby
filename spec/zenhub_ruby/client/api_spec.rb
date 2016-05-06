@@ -13,7 +13,7 @@ describe ZenhubRuby::Client::Api do
   describe '#issue_data', vcr: true do
     subject(:data) do
       VCR.use_cassette('Zenhub_Client_Api/_issue_data/gets_own_issue_data') do
-        client.issue_data(repo_id: repo_id, issue_number: issue_number) 
+        client.issue_data(repo_id, issue_number)
       end
     end
 
@@ -27,7 +27,7 @@ describe ZenhubRuby::Client::Api do
   describe '#issue_events', vcr: true do
     subject(:data) do
       VCR.use_cassette('Zenhub_Client_Api/_issue_events/gets_own_issue_events') do
-        client.issue_events(repo_id: repo_id, issue_number: issue_number) 
+        client.issue_events(repo_id, issue_number)
       end
     end
 
@@ -41,7 +41,7 @@ describe ZenhubRuby::Client::Api do
   describe '#board_data', vcr: true do
     subject(:data) do
       VCR.use_cassette('Zenhub_Client_Api/_board_data/gets_own_board_data') do
-        client.board_data(repo_id: repo_id) 
+        client.board_data(repo_id)
       end
     end
 

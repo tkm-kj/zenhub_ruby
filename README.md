@@ -31,19 +31,19 @@ client = ZenhubRuby::Client.new('YOUR_ACCESS_TOKEN')
 ### Get issue data
 
 ```ruby
-client.issue_data(repo_id: REPO_ID, issue_number: ISSUE_NUMBER)
+client.issue_data(REPO_ID, ISSUE_NUMBER)
 ```
 
 ### Get issue events
 
 ```ruby
-client.issue_events(repo_id: REPO_ID, issue_number: ISSUE_NUMBER)
+client.issue_events(REPO_ID, ISSUE_NUMBER)
 ```
 
 ### Get the ZenHub Board data for a repository
 
 ```ruby
-client.board_data(repo_id: REPO_ID)
+client.board_data(REPO_ID)
 ```
 
 ## Contributing
