@@ -1,6 +1,7 @@
 require 'zenhub_ruby/connection'
 require 'zenhub_ruby/client/api'
 require 'zenhub_ruby/github'
+require 'zenhub_ruby/version'
 
 module ZenhubRuby
   class Client
