@@ -4,8 +4,8 @@ require 'zenhub_ruby/github'
 
 module ZenhubRuby
   class Client
-    include ZenhubRuby::Connection
-    include ZenhubRuby::Client::Api
+    include Connection
+    include Client::Api
 
     attr_reader :zenhub_access_token, :github
 
