@@ -1,5 +1,9 @@
 require 'zenhub_ruby/client'
 
 module ZenhubRuby
-  VERSION = "0.1.1"
+  class << self
+    def new(zenhub_access_token, github_access_token)
+      Client.new(zenhub_access_token, github_access_token)
+    end
+  end
 end
