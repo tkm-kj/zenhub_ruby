@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "faraday"
   spec.add_dependency "faraday_middleware"
+  spec.add_dependency 'octokit'
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "dotenv"
   spec.add_development_dependency "rake", "~> 10.0"

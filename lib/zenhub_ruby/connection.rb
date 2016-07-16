@@ -21,7 +21,7 @@ module ZenhubRuby
         headers: {
           accept: 'application/json',
           user_agent: "ZenhubRuby v#{VERSION}",
-          x_authentication_token: access_token
+          x_authentication_token: zenhub_access_token
         }
       }
     end
