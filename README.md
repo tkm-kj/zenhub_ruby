@@ -25,25 +25,25 @@ Or install it yourself as:
 ```ruby
 require 'zenhub_ruby'
 
-client = ZenhubRuby::Client.new('YOUR_ACCESS_TOKEN')
+client = ZenhubRuby::Client.new('ZENHUB_ACCESS_TOKEN', 'GITHUB_ACCESS_TOKEN')
 ```
 
 ### Get issue data
 
 ```ruby
-client.issue_data(REPO_ID, ISSUE_NUMBER)
+client.issue_data('REPO_NAME(ex: "tkm-kj/zenhub_ruby")', ISSUE_NUMBER)
 ```
 
 ### Get issue events
 
 ```ruby
-client.issue_events(REPO_ID, ISSUE_NUMBER)
+client.issue_events('REPO_NAME', ISSUE_NUMBER)
 ```
 
 ### Get the ZenHub Board data for a repository
 
 ```ruby
-client.board_data(REPO_ID)
+client.board_data('REPO_NAME')
 ```
 
 ## Contributing
