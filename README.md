@@ -28,6 +28,12 @@ require 'zenhub_ruby'
 client = ZenhubRuby::Client.new('ZENHUB_ACCESS_TOKEN', 'GITHUB_ACCESS_TOKEN')
 ```
 
+or
+
+```ruby
+client = ZenhubRuby.new('ZENHUB_ACCESS_TOKEN', 'GITHUB_ACCESS_TOKEN')
+```
+
 ### Get issue data
 
 ```ruby
