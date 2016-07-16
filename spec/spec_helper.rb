@@ -1,9 +1,6 @@
-require 'dotenv'
 require 'vcr'
 require 'webmock/rspec'
 require 'zenhub_ruby'
-
-Dotenv.load
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr'
