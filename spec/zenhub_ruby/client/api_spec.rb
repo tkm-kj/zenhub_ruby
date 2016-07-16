@@ -5,15 +5,19 @@ def api_url(path)
 end
 
 describe ZenhubRuby::Client::Api do
-  let(:access_token) { ENV['ACCESS_TOKEN'] || 'access_token' }
-  let(:repo_id) { ENV['REPO_ID'] || 7777 }
-  let(:issue_number) { ENV['ISSUE_NUMBER'] || 77 }
-  let(:client) { ZenhubRuby::Client.new(access_token) }
+  let(:zenhub_access_token) { 'wfg9zzixmpcblst36gbzsvv00an3f7ey9w9njv8c94ur415r9gbygzgor0uadcvpkhpr0c2s79vmwfs6' }
+  let(:github_access_token) { '9hpukb0o794qu7mp2pfhu11hks6e5b34ak4gzw4y' }
+  let(:repo_name) { 'tkm-kj/zenhub_ruby' }
+  let(:repo_id) { 7777 }
+  let(:issue_number) { 77 }
+  let(:client) { ZenhubRuby::Client.new(zenhub_access_token, github_access_token) }
+
+  before { allow(client.github).to receive(:repo_id).with(repo_name).and_return(repo_id) }
 
   describe '#issue_data', vcr: true do
     subject(:data) do
       VCR.use_cassette('Zenhub_Client_Api/_issue_data/gets_own_issue_data') do
-        client.issue_data(repo_id, issue_number)
+        client.issue_data(repo_name, issue_number)
       end
     end
 
@@ -27,7 +31,7 @@ describe ZenhubRuby::Client::Api do
   describe '#issue_events', vcr: true do
     subject(:data) do
       VCR.use_cassette('Zenhub_Client_Api/_issue_events/gets_own_issue_events') do
-        client.issue_events(repo_id, issue_number)
+        client.issue_events(repo_name, issue_number)
       end
     end
 
@@ -41,7 +45,7 @@ describe ZenhubRuby::Client::Api do
   describe '#board_data', vcr: true do
     subject(:data) do
       VCR.use_cassette('Zenhub_Client_Api/_board_data/gets_own_board_data') do
-        client.board_data(repo_id)
+        client.board_data(repo_name)
       end
     end
 
