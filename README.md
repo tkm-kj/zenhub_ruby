@@ -1,4 +1,4 @@
-# zenhub_ruby
+# zenhub_ruby [![Build Status](https://travis-ci.org/tkm-kj/zenhub_ruby.svg?branch=master)](https://travis-ci.org/tkm-kj/zenhub_ruby) [![Gem Version](https://badge.fury.io/rb/zenhub_ruby.svg)](https://badge.fury.io/rb/zenhub_ruby)
 
 Ruby client of [ZenHub API](https://github.com/ZenHubIO/API)
 
