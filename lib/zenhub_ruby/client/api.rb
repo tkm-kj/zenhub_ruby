@@ -9,8 +9,9 @@ module ZenhubRuby
         get "/p1/repositories/#{github.repo_id(repo_name)}/issues/#{issue_number}/events"
       end
 
-      def board_data(repo_name)
-        get "/p1/repositories/#{github.repo_id(repo_name)}/board"
+      def board_data(repo_name, workspace_id)
+        get "/p2/workspaces/#{workspace_id}/repositories/#{github.repo_id(repo_name)}/board"
+
       end
     end
   end
