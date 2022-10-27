@@ -3,7 +3,7 @@ require 'faraday_middleware'
 
 module ZenhubRuby
   module Connection
-    END_POINT = 'https://api.zenhub.io'.freeze
+    END_POINT = 'https://api.zenhub.com'.freeze
 
     def get(path)
       api_connection.get(path)
