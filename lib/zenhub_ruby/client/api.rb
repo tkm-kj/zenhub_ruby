@@ -16,6 +16,14 @@ module ZenhubRuby
       def workspace_data(repo_name, workspace_id)
         get "/p2/workspaces/#{workspace_id}/repositories/#{github.repo_id(repo_name)}/board"
       end
+
+      def repo_releases(repo_name)
+        get "/p1/repositories/#{github.repo_id(repo_name)}/reports/releases"
+      end
+
+      def release_issues(release_id)
+        get "/p1/reports/release/#{release_id}/issues"
+      end
     end
   end
 end
